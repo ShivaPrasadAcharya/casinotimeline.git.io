@@ -1,4 +1,6 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
+
+// Lucide Icons
 import { 
   Globe2, 
   Info, 
@@ -14,12 +16,13 @@ import {
   Laptop,
   BarChart,
   HelpCircle,
-  ChevronRight,  // New icon for index
-  ListFilter,      // New icon for index
+  ChevronRight,
+  ListFilter,
   Menu
 } from 'lucide-react';
+
+// UI Components from shadcn/ui
 import { Card, CardContent } from '@/components/ui/card';
-import { timelineGroups } from './timelineData';
 import {
   Select,
   SelectContent,
@@ -27,12 +30,30 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import jsPDF from 'jspdf';
-import html2canvas from 'html2canvas';
+
+// Custom Components - Timeline
 import Timeline from './components/timeline/Timeline';
+import TimelineEntry from './components/timeline/TimelineEntry';
+import IndexSection from './components/timeline/IndexSection';
+
+// Custom Components - Layout & Header
 import Header from './components/header/Header';
 import MenuTrigger from './components/layout/MenuTrigger';
+
+// Custom Components - Text & Search
+import CategoryIcon from './components/icons/CategoryIcon';
+import HighlightedText from './components/text/HighlightedText';
+import SearchInput from './components/search/SearchInput';
+
+// Custom Hooks
 import { useSearch } from './hooks/useSearch';
+
+// Data
+import { timelineGroups } from './data/timelineData';
+
+// External Libraries
+import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
 
 function App() {
   // State management
