@@ -1,5 +1,34 @@
-import React, { useState } from 'react';
-import { timelineGroups } from './data/timelineData';
+import React, { useState, useRef, useEffect } from 'react';
+import { 
+  Globe2, 
+  Info, 
+  Languages, 
+  ChevronDown, 
+  Download, 
+  Eye, 
+  EyeOff,
+  FileText,
+  Building,
+  Scale,
+  HeartHandshake,
+  Laptop,
+  BarChart,
+  HelpCircle,
+  ChevronRight,  // New icon for index
+  ListFilter,      // New icon for index
+  Menu
+} from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
+import { timelineGroups } from './timelineData';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
 import Timeline from './components/timeline/Timeline';
 import Header from './components/header/Header';
 import MenuTrigger from './components/layout/MenuTrigger';
